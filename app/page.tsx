@@ -160,8 +160,8 @@ export default function HomePage() {
           </p>
           <dl className="space-y-2 mb-10">
             {[
-              { days: "Mon – Fri", time: "7:00 am – 7:00 pm" },
-              { days: "Sat – Sun", time: "8:00 am – 6:00 pm" },
+              { days: "Mon – Fri", time: "6:00 am – 8:00 pm" },
+              { days: "Saturday",  time: "7:00 am – 9:00 pm" },
             ].map(({ days, time }) => (
               <div key={days} className="flex gap-6 items-baseline">
                 <dt className="font-body text-sm text-milk/45 w-24 flex-shrink-0">{days}</dt>
