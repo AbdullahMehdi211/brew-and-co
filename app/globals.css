@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+@theme {
+  /* Brand Colors */
+  --color-cream: #F5EDD8;
+  --color-cream-muted: #EDE0C4;
+  --color-milk: #FAF6EE;
+  --color-espresso: #2D1810;
+  --color-espresso-light: #4A2C1E;
+  --color-espresso-dim: #6B4435;
+  --color-caramel: #C8622A;
+  --color-caramel-hover: #B35220;
+  --color-caramel-muted: #D99060;
+  --color-latte: #D4A847;
+  --color-latte-muted: #E8C070;
+  --color-sage: #7B8C4A;
+  --color-sage-muted: #96A860;
+  --color-rose: #C8856E;
+  --color-rose-muted: #E8A090;
+
+  /* Border Radius */
+  --radius-card: 1.5rem;
+  --radius-sm: 0.5rem;
+  --radius-xs: 0.25rem;
+
+  /* Shadows */
+  --shadow-warm: 0 8px 32px rgba(45, 24, 16, 0.12);
+  --shadow-card: 0 4px 16px rgba(45, 24, 16, 0.08);
+  --shadow-lifted: 0 16px 48px rgba(45, 24, 16, 0.16);
 }
 
+/* ─── Font + Color Mappings ──────────────────────────────────────── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ────────────────────────────────────────────────────────── */
+:root {
+  --background: #F5EDD8;
+  --foreground: #2D1810;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* ─── Custom Font Utilities ───────────────────────────────────────── */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-fraunces), Georgia, serif;
+  }
+  .font-body {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
 }
